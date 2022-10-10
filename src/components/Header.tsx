@@ -1,12 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Header = (): JSX.Element => {
+const Header: React.FC = (): JSX.Element => {
     return (
-        <nav className="px-20 bg-gray-200 flex items-center justify-between py-3">
-            <div className="font-bold">
-                <NavLink to="/">React CRUD</NavLink>
-            </div>
+        <nav className="px-20 bg-gray-200 flex items-center justify-between py-3 sticky top-0 shadow-md">
+            <div className="font-bold">React CRUD</div>
             <div className="space-x-3 font-semibold">
                 <NavLink
                     className={({ isActive }) =>
@@ -34,7 +32,7 @@ const Header = (): JSX.Element => {
                 </NavLink>
             </div>
             <div>
-                <NavLink to="adduser">
+                <NavLink to="add-user">
                     <button className="bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md shadow-blue-700/50">
                         Add New User
                     </button>
