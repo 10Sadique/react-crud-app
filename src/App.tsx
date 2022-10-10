@@ -4,8 +4,10 @@ import Main from './layout/Main';
 import About from './pages/About';
 import AddUser from './pages/AddUser';
 import Contact from './pages/Contact';
+import EditUser from './pages/EditUser';
 import Error from './pages/Error';
 import Home from './pages/Home';
+import ViewUser from './pages/ViewUser';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +19,9 @@ const router = createBrowserRouter([
             { path: 'contact', element: <Contact /> },
             { path: 'about', element: <About /> },
             { path: '*', element: <Error /> },
-            { path: 'add-user', element: <AddUser /> },
+            { path: '/users/add', element: <AddUser /> },
+            { path: '/users/edit/:id', element: <EditUser /> },
+            { path: '/users/:id', element: <ViewUser /> },
         ],
     },
 ]);

@@ -1,9 +1,16 @@
-import React, { useState, ChangeEvent, MouseEvent } from 'react';
+import React, { useState, ChangeEvent, MouseEvent, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const AddUser: React.FC = (): JSX.Element => {
+const EditUser: React.FC = (): JSX.Element => {
     let navigate = useNavigate();
+    const { id } = useParams();
+
+    const loadUser = async (): Promise<void> => {
+        const result = await axios.get(`http://localhost:3002/users/${id}`);
+        setUser(result?.data);
+    };
+
     const [user, setUser] = useState({
         name: '',
         username: '',
@@ -11,16 +18,20 @@ const AddUser: React.FC = (): JSX.Element => {
         website: '',
     });
 
+    useEffect(() => {
+        loadUser();
+    }, []);
+
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
 
-    const handleAddUser = async (
+    const handleEditUser = async (
         e: MouseEvent<HTMLButtonElement>
     ): Promise<void> => {
         e.preventDefault();
 
-        await axios.post('http://localhost:3002/users', user);
+        await axios.put(`http://localhost:3002/users/${id}`, user);
         navigate('/');
     };
 
@@ -29,7 +40,7 @@ const AddUser: React.FC = (): JSX.Element => {
     return (
         <div className="md:px-20 px-10 py-10">
             <h1 className="font-bold mb-5 text-gray-700 text-2xl text-center">
-                Add New User
+                Edit a User
             </h1>
             <div className="md:mx-20 bg-gray-200 px-14 py-10 rounded-lg shadow-lg">
                 <form>
@@ -90,10 +101,10 @@ const AddUser: React.FC = (): JSX.Element => {
 
                     <div className="flex justify-center mt-6">
                         <button
-                            onClick={(e) => handleAddUser(e)}
+                            onClick={(e) => handleEditUser(e)}
                             className="px-4 py-3 bg-blue-600 rounded-lg shadow-md shadow-blue-600/50 text-white"
                         >
-                            Add User
+                            Update User Data
                         </button>
                     </div>
                 </form>
@@ -102,4 +113,4 @@ const AddUser: React.FC = (): JSX.Element => {
     );
 };
 
-export default AddUser;
+export default EditUser;
