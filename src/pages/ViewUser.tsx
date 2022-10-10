@@ -5,8 +5,6 @@ import { useParams } from 'react-router-dom';
 const ViewUser = () => {
     let { id } = useParams();
 
-    console.log(id, typeof id);
-
     const [user, setUser] = useState({
         name: '',
         username: '',

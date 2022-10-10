@@ -1,46 +1,54 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h1>React CRUD App</h1>
+<hr><p>A react application with CRUD operations and React Routing.</p><h2>General Information</h2>
+<hr><ul>
+<li>This project can perform CRUD operation on some user data loaded from a JSON server.</li>
+</ul><ul>
+<li>Implementing React Router for different pages.</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>TypeScript</li>
+</ul><ul>
+<li>React Router</li>
+</ul><ul>
+<li>Tailwind CSS</li>
+</ul><ul>
+<li>JSON Server</li>
+</ul><ul>
+<li>Axios</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>Page Routing using React Router DOM</li>
+</ul><ul>
+<li>CRUD Operations</li>
+</ul><ul>
+<li>Data Fetchig using Axios API</li>
+</ul><h2>Screenshots</h2>
+<hr><p><img src="https://i.ibb.co/L0zLTNk/homepage.png" alt=""></p><p><img src="https://i.ibb.co/mBk5BRP/addnew.png" alt=""></p><p><img src="https://i.ibb.co/Mf4dF3v/update-user.png" alt=""></p><p><img src="https://i.ibb.co/8Mgxn3Z/view-user.png" alt=""></p><h2>Setup</h2>
+<hr><p>The following are the requirements to run this project:</p>
+<ul>
+<li>Node Package Manager(NPM)</li>
+<li>React</li>
+</ul><h5>Steps</h5><ul>
+<li>Run <code>npm install</code> in terminal to install all the dependencies.</li>
+</ul><ul>
+<li>To run the app in development mode run <code>npm start</code> in terminal which will open the applicaton at <a href="http://localhost:3000">http://localhost:3000</a>.</li>
+</ul><ul>
+<li>To run the json-server run <code>npm run json-server</code> in terminal which will start the json-server at <a href="http://localhost:3002">http://localhost:3002</a>.</li>
+</ul><ul>
+<li>To run both development mode and json-server concurrently run <code>npm run start:dev</code> in the terminal.</li>
+</ul><ul>
+<li>For production build run <code>npm run build</code>.</li>
+</ul><h2>Project Status</h2>
+<hr><p>Completed and open for contributions.</p><h2>Features that can be added</h2>
+<hr><ul>
+<li>Admin login can be added.</li>
+</ul><ul>
+<li>Responsiveness can be added.</li>
+</ul><h2>Contact</h2>
+<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/jafarsjahan/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/10Sadique"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
